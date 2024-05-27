@@ -1,4 +1,4 @@
-import { Box, Container, VStack, HStack, IconButton, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Text, Image } from "@chakra-ui/react";
+import { Box, Container, VStack, HStack, IconButton, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Text, Image, Flex, Heading } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaVolumeUp } from "react-icons/fa";
 import { useState } from "react";
 
