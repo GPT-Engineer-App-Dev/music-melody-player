@@ -1,4 +1,4 @@
-import { Box, Container, VStack, HStack, Text, IconButton, Progress, Slider, SliderTrack, SliderFilledTrack, SliderThumb, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Container, VStack, HStack, Text, IconButton, Progress, Slider, SliderTrack, SliderFilledTrack, SliderThumb, useBreakpointValue, Flex, Spacer, Link } from "@chakra-ui/react";
 import { FaPlay, FaPause } from "react-icons/fa";
 import { useState } from "react";
 
@@ -23,11 +23,19 @@ const Index = () => {
 
   return (
     <Container maxW="container.xl" p={0}>
-      <Box bg="gray.800" color="white" py={4} px={8}>
-        <Text fontSize="2xl" fontWeight="bold">Music Player</Text>
+      <Box bg="gray.900" color="white" py={4} px={8}>
+        <Flex align="center">
+          <Text fontSize="2xl" fontWeight="bold">Music Player</Text>
+          <Spacer />
+          <HStack spacing={4}>
+            <Link href="#" fontSize="lg">Home</Link>
+            <Link href="#" fontSize="lg">Library</Link>
+            <Link href="#" fontSize="lg">Settings</Link>
+          </HStack>
+        </Flex>
       </Box>
       <VStack spacing={4} align="stretch" p={8}>
-        <Box bg="gray.700" p={4} borderRadius="md">
+        <Box bg="gray.800" p={4} borderRadius="md">
           <Text fontSize="lg" fontWeight="bold">Song List</Text>
           <VStack spacing={2} mt={2}>
             <Text>Song 1</Text>
@@ -36,7 +44,7 @@ const Index = () => {
             <Text>Song 4</Text>
           </VStack>
         </Box>
-        <Box bg="gray.700" p={4} borderRadius="md">
+        <Box bg="gray.800" p={4} borderRadius="md">
           <HStack justify="space-between" align="center">
             <IconButton
               aria-label={isPlaying ? "Pause" : "Play"}
@@ -54,7 +62,7 @@ const Index = () => {
             <SliderThumb />
           </Slider>
         </Box>
-        <Box bg="gray.700" p={4} borderRadius="md">
+        <Box bg="gray.800" p={4} borderRadius="md">
           <Text fontSize="lg" fontWeight="bold">Volume</Text>
           <Slider aria-label="volume-slider" value={volume} onChange={handleVolumeChange} mt={2}>
             <SliderTrack>
