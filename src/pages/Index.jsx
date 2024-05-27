@@ -1,4 +1,4 @@
-import { Box, Container, VStack, HStack, Text, IconButton, Progress, Slider, SliderTrack, SliderFilledTrack, SliderThumb } from "@chakra-ui/react";
+import { Box, Container, VStack, HStack, Text, IconButton, Progress, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Flex, Spacer } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaVolumeUp } from "react-icons/fa";
 import { useState } from "react";
 
@@ -11,9 +11,17 @@ const Index = () => {
   };
 
   return (
-    <Container maxW="container.xl" p={0}>
-      <Box bg="gray.800" color="white" py={4} px={8}>
-        <Text fontSize="2xl" fontWeight="bold">Music Player</Text>
+    <Container maxW="container.xl" p={0} bg="gray.900" color="white" minH="100vh">
+      <Box bg="gray.800" py={4} px={8}>
+        <Flex align="center">
+          <Text fontSize="2xl" fontWeight="bold">Music Player</Text>
+          <Spacer />
+          <HStack spacing={8}>
+            <Text>Home</Text>
+            <Text>Library</Text>
+            <Text>Search</Text>
+          </HStack>
+        </Flex>
       </Box>
       <Container centerContent maxW="container.md" py={8}>
         <VStack spacing={4} width="100%">
