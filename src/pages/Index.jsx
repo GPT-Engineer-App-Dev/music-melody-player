@@ -1,4 +1,4 @@
-import { Box, Container, VStack, HStack, Text, IconButton, Progress, Slider, SliderTrack, SliderFilledTrack, SliderThumb, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Container, VStack, HStack, Text, IconButton, Progress, Slider, SliderTrack, SliderFilledTrack, SliderThumb, useBreakpointValue, Image } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaVolumeUp } from "react-icons/fa";
 import { useState } from "react";
 
@@ -22,17 +22,17 @@ const Index = () => {
   const iconSize = useBreakpointValue({ base: "md", md: "lg" });
 
   return (
-    <Container maxW="container.xl" p={4}>
-      <Box as="nav" bg="gray.800" color="white" p={4} mb={4} borderRadius="md" boxShadow="lg">
-        <Text fontSize="2xl" fontWeight="extrabold" textAlign="center">Music Player</Text>
+    <Container maxW="container.xl" p={4} bgImage="url('/path/to/background.jpg')" bgSize="cover" bgPosition="center">
+      <Box as="nav" bg="gray.900" color="white" p={4} mb={4} borderRadius="md" boxShadow="lg" textAlign="center">
+        <Text fontSize="3xl" fontWeight="extrabold">Music Player</Text>
       </Box>
-      <VStack spacing={4} align="stretch">
+      <VStack spacing={6} align="stretch">
         <Box bg="white" p={6} borderRadius="lg" boxShadow="lg">
           <Text fontSize="2xl" fontWeight="bold" mb={4}>Song List</Text>
           <VStack spacing={3} mt={2} align="stretch">
-            <Box p={2} bg="gray.50" borderRadius="md" boxShadow="sm">Song 1</Box>
-            <Box p={2} bg="gray.50" borderRadius="md" boxShadow="sm">Song 2</Box>
-            <Box p={2} bg="gray.50" borderRadius="md" boxShadow="sm">Song 3</Box>
+            <Box p={3} bg="gray.100" borderRadius="md" boxShadow="sm" _hover={{ bg: "gray.200" }}>Song 1</Box>
+            <Box p={3} bg="gray.100" borderRadius="md" boxShadow="sm" _hover={{ bg: "gray.200" }}>Song 2</Box>
+            <Box p={3} bg="gray.100" borderRadius="md" boxShadow="sm" _hover={{ bg: "gray.200" }}>Song 3</Box>
           </VStack>
         </Box>
         <Box bg="white" p={6} borderRadius="lg" boxShadow="lg">
@@ -62,7 +62,7 @@ const Index = () => {
             <SliderThumb boxSize={6} />
           </Slider>
         </Box>
-        <Box bg="gray.100" p={4} borderRadius="md" boxShadow="md">
+        <Box bg="white" p={4} borderRadius="md" boxShadow="md">
           <HStack spacing={4} align="center">
             <FaVolumeUp />
             <Slider
@@ -72,6 +72,7 @@ const Index = () => {
               min={0}
               max={100}
               flex="1"
+              colorScheme="blue"
             >
               <SliderTrack>
                 <SliderFilledTrack />
