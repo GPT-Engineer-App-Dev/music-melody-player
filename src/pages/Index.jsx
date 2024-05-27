@@ -23,7 +23,7 @@ const Index = () => {
 
   return (
     <Container maxW="container.xl" p={4}>
-      <Box as="nav" bg="blue.600" color="white" p={4} mb={4} borderRadius="md" boxShadow="lg">
+      <Box as="nav" bg="gray.800" color="white" p={4} mb={4} borderRadius="md" boxShadow="lg">
         <Text fontSize="2xl" fontWeight="extrabold" textAlign="center">Music Player</Text>
       </Box>
       <VStack spacing={4} align="stretch">
